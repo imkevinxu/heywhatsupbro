@@ -123,11 +123,28 @@
         /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
         width: 50%;
         position: relative;
-        background: #AE0B12;
         color: #fff;
         text-align: center;
         padding: .4em 2em; /* Adjust to suit */
         margin: 10px auto 1em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+        
+        /* IE10 */ 
+        background-image: -ms-linear-gradient(top, #C20011 0%, #AE0B12 100%);
+
+        /* Mozilla Firefox */ 
+        background-image: -moz-linear-gradient(top, #C20011 0%, #AE0B12 100%);
+
+        /* Opera */ 
+        background-image: -o-linear-gradient(top, #C20011 0%, #AE0B12 100%);
+
+        /* Webkit (Safari/Chrome 10) */ 
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #C20011), color-stop(1, #AE0B12));
+
+        /* Webkit (Chrome 11+) */ 
+        background-image: -webkit-linear-gradient(top, #C20011 0%, #AE0B12 100%);
+
+        /* Proposed W3C Markup */ 
+        background-image: linear-gradient(top, #C20011 0%, #AE0B12 100%);
     }
     .ribbon:before, .ribbon:after {
         content: "";
@@ -147,6 +164,7 @@
         border-left-width: 1.2em;
         border-right-color: transparent;
     }
+    .ribbon .ribbon-content { text-shadow: #570008 -1px -1px 0; }
     .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
         content: "";
         position: absolute;
