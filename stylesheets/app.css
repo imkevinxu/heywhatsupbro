@@ -1,0 +1,14 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+	/* Custom Responsiveness */
+
+        @media only screen and (max-width: 767px) {
+                .ribbon { font-size: 18px !important; margin-top: 0 !important; width: 70% !important;}
+		.ribbon:before { left: -1.4em !important; }
+		.ribbon:after { right: -1.4em !important; }
+                h2#tagline { font-size: 20px; margin: 0px auto 10px !important}
+                iframe.clarity { margin-bottom: 20px;  width: 320px !important; height: 460px !important;}
+		hr:before { margin-top:-15px !important;}
+		footer { font-size: .87em; }
+        }

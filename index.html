@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name = "viewport" content = "initial-scale = .8, user-scalable = no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="apple-touch-icon" href="images/logo.png" /> 
+
+	<meta property="og:image" content="http://heywhatsupbro.com/images/fb_screenshot.png">
+	<meta property="og:description" content="" />
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" href="images/favicon.ico">  
+	<link rel="image_src" href="images/fb_screenshot.png">
+	
+	<title>Hey, whatsup bro? Laidback consulting for bros</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sail' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+
+		body { margin: 10px 0; font-family: 'Arvo', serif; background-image:url('images/bright_squares.png'); }
+		.row { text-align:center; }
+		h2#tagline {  margin-top:-20px; font-family: 'Sail', cursive; margin-bottom:35px }
+		iframe.clarity { width: 350px; height: 503px; border:1px solid #333; }
+		ul.specialties { margin: 10px 0; }
+		ul.specialties li { font-size:14px; display: inline-block; margin-right:10px; margin-bottom: 6px ; padding:3px 8px; background: #F4F2EC; border: 1px solid #AAA;}
+		ul.specialties li:last-child { margin: 0;}
+		#social { margin: 25px auto 30px; }
+		iframe.twitter-share-button { height: 64px !important; width: 90px !important; }
+		#about_modal p {font-size:14px; line-height:23px; margin: 0 0 14px;}
+		#about_modal p.lead {font-size:20px; line-height:20px; margin-bottom:30px; }
+
+		ul.specialties li:hover {transition: all 0.18s ease-in-out;
+    -webkit-transition: all 0.18s ease-in-out;
+    -moz-transition: all 0.18s;
+    ease-in-out; box-shadow: 0 0 5px #67BAF0;
+    -webkit-box-shadow: 0 0 5px #67BAF0; 
+    -moz-box-shadow: 0 0 5px #67BAF0;
+    border:1px solid #67BAF0; }
+
+footer {
+   color:white;
+   padding:5px 0 0 12px;	
+   position:fixed;
+   right:9.8%;
+   bottom:0px;
+   height:25px;
+   width:100px;
+   background:#000;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+}
+footer:hover, footer:active {
+   height:27px;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+		
+a:hover .ribbon, a:active .ribbon {
+ margin-top:12px;
+ margin-bottom:33px;
+}	
+.ribbon {
+ font-size: 35px;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+ width: 50%;
+
+ position: relative;
+ background: #AE0B12;
+ color: #fff;
+ text-align: center;
+ padding: .4em 2em; /* Adjust to suit */
+ margin: 10px auto 1em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+.ribbon:before, .ribbon:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.2em solid #90090F;
+ z-index: -1;
+}
+.ribbon:before {
+ left: -1.45em;
+ border-right-width: 1.2em;
+ border-left-color: transparent;
+}
+.ribbon:after {
+ right: -1.45em;
+ border-left-width: 1.2em;
+ border-right-color: transparent;
+}
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #72070B transparent transparent transparent;
+ bottom: -1em;
+}
+.ribbon .ribbon-content:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+.ribbon .ribbon-content:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
+
+hr {
+	position: relative;
+	background: #c0c0c0;
+	height: 2px;
+	width:90%;
+	margin: 15px auto 20px;
+}
+hr:before {
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: .8em;
+	left: 50%;
+	margin: -10px 0 0 -25px;
+	content: "\2767";
+	font-size: 150%;
+	padding: 0 8px;
+	background-image:url('images/bright_squares.png');
+}
+	</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28537857-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=150490615032311";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			<div class="twelve columns">
+				<a href="/">
+					<h1 class="ribbon">
+						<strong class="ribbon-content">HEYWHATSUPBRO?</strong>
+					</h1>
+				</a>
+				<h2 id="tagline">&#8220;Laidback consulting for bros&#8221;</h2>
+			
+				<div class="row">
+					<div class="six columns">
+						<h3 class="holla">Holla @ Kevin for</h3>	
+						<hr/>
+						<ul class="specialties">
+							<li>startups</li>
+							<li>hollywood</li>
+							<li>bacon</li>
+							<li>angry birds help</li>
+							<li>reddit bonding</li>
+							<li>late night banter</li>
+							<li>first world problems</li>
+						</ul>
+						<iframe class="clarity" src="https://clarity.fm/#/kevinxu"></iframe>
+					</div>
+					<div class="six columns">
+						<h3 class="holla">Shoutout @ Nam for</h3>	
+						<hr/>
+						<ul class="specialties">
+							<li>doctor stuff</li>
+							<li>pho</li>
+							<li>philanthrophy</li>
+							<li>girl problems</li>
+							<li>stuff to do friday night</li>
+							<li>pokemon battles</li>
+							<li>tebowing</li>
+						</ul>
+						<iframe class="clarity" src="https://clarity.fm/#/namnguyen"></iframe>
+					</div>
+					<div class="clearfix"></div>	
+				</div>
+				<div id="social">
+
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://heywhatsupbro.com/" data-text="NEW SITE!!! heywhatsupbro? - “Laidback consulting with bros”" data-via="imkevinxu">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<div class="fb-like" data-href="http://heywhatsupbro.com/" data-send="true" data-width="300" data-show-faces="true"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="about_modal" class="reveal-modal">
+			<h2>About Us</h2>
+			<p class="lead">What is this, I don't even... ಠ_ಠ</p>
+			<p>Welcome to HEYWHATSUPBRO? the best place for a laidback chat with a bro about anything! This primarily started out on a tipsy night from a need for chill bro talks from people who think they give good advice.</p>
+			<p>Check it out for yourself, give these handsome bros a call!</p>
+			<p>Design Framework powered by <a href="http://foundation.zurb.com/" target="_blank">Zurb Foundation</a>.</p>
+			<p>Calling platform powered by <a href="http://clarity.fm" target="_blank">Clarity.fm</a>.</p>
+			<p>Created by <a href="http://www.facebook.com/imkevinxu" target="_blank">Kevin Xu</a> and <a href="http://www.facebook.com/quocnam" target="_blank">Nam Nguyen</a>.</p>
+
+			<a class="close-reveal-modal">&#215;</a>
+		</div>		
+		
+		<footer>
+			<a href="#" style="color:white" data-reveal-id="about_modal" >what the... ಠ_ಠ</a>
+		</footer>
+	</div>
+	<!-- container -->
+
+
+
+
+	<!-- Included JS Files -->
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+
+</body>
+</html>
