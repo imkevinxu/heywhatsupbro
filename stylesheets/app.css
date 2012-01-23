@@ -9,7 +9,7 @@
     body {
         margin: 10px 0;
         font-family: 'Arvo', serif;
-        background-image:url('images/bright_squares.png');
+        background-image:url('/images/bright_squares.png');
     }
 
     .row { text-align:center; }
@@ -64,7 +64,7 @@
         content: "\2767";
         font-size: 150%;
         padding: 0 8px;
-        background-image:url('images/bright_squares.png');
+        background-image:url('/images/bright_squares.png');
     }
 
     #social { margin: 25px auto 30px; }
