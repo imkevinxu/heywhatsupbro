@@ -125,6 +125,7 @@
         position: relative;
         color: #fff;
         text-align: center;
+        letter-spacing:2px;
         padding: .4em 2em; /* Adjust to suit */
         margin: 10px auto 1em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
         
